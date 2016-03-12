@@ -1,0 +1,14 @@
+nginx:
+  image: ricky/nginx
+  links:
+   - tomcatapp1:tomcatapp1
+   - tomcatapp2:tomcatapp2
+   - tomcatapp3:tomcatapp3
+  ports:
+   - "80:80"
+tomcatapp1:
+  image: ricky/tomcat
+tomcatapp2:
+  image: ricky/tomcat
+tomcatapp3:
+  image: ricky/tomcat
